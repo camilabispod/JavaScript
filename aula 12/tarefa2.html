@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste...</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bom dia, Boa tarde, ou Boa noite?</h1>
+    Qual o horário atual na sua localidade?: <input type="text" name="tempo" id="tempo">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+    <script>
+      function calcular() {
+        
+        var horario = document.getElementById('tempo')
+        
+        var res = document.getElementById('res')
+        
+         if (horario.value < 12) {
+          res.innerHTML = `Bom dia!`
+        } else if (horario.value <= 18) {
+         res.innerHTML = 'Boa tarde!'
+        } else {
+          res.innerHTML ='Boa noite'
+             }
+
+        }
+      
+    </script>
+</body>
+</html>

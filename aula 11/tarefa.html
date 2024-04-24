@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de países</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Você é brasileiro ou estrangeiro?</h1>
+    
+    Qual o nome do seu país de origem?: <input type="text" name="paisdeorigem" id="paisdeorigem">
+   
+    <input type="button" value="Verificar" onclick="calcular()">
+
+    <div id="res">
+
+    </div>
+
+    <script>
+        function calcular() {
+        var nomedopais = document.getElementById('paisdeorigem')
+        var res = document.getElementById('res')
+
+        if (nomedopais.value == 'Brasil') {
+        res.innerHTML = "Você é Brasileiro"
+        } else {
+        res.innerHTML = `<p>Você nasceu em um país chamado <strong>${nomedopais.value}</strong> então, você é <strong>estrangeiro</strong></p>.`
+        } }
+        
+    </script>
+</body>
+</html>
